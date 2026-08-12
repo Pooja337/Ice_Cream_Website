@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -93,6 +93,12 @@
             .faq-hero, .faq-body { grid-template-columns: 1fr; }
             .faq-hero-images { height: 400px; }
             .faq-sidebar { position: static; margin-bottom: 40px; display: flex; flex-wrap: wrap; gap: 5px; }
+        }
+        @media (max-width: 768px) {
+            .faq-hero { padding: 130px 5% 50px; }
+            .faq-hero-text h1 { font-size: 3rem; }
+            .faq-hero-text p { font-size: 1rem; }
+            .faq-hero-images { height: 300px; }
         }
     </style>
     <!-- Favicon -->
