@@ -609,6 +609,7 @@ img {
     background: var(--dark);
     color: #fff;
     margin-top: 50px;
+    z-index: 10;
 }
 .footer-wave {
     position: absolute;
