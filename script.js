@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+﻿document.addEventListener('DOMContentLoaded', () => {
     /* === Preloader === */
     const preloader = document.getElementById('preloader');
     setTimeout(() => {
@@ -252,10 +252,10 @@ document.addEventListener('DOMContentLoaded', () => {
         newsletterForm.addEventListener('submit', (e) => {
             e.preventDefault();
             const btn = newsletterForm.querySelector('button');
-            btn.innerHTML = '✓';
+            btn.innerHTML = 'âœ“';
             setTimeout(() => {
                 newsletterForm.reset();
-                btn.innerHTML = '→';
+                btn.innerHTML = 'â†’';
             }, 2000);
         });
     }
