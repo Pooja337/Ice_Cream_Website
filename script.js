@@ -1,4 +1,4 @@
-﻿document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
     /* === Preloader === */
     const preloader = document.getElementById('preloader');
     setTimeout(() => {
@@ -312,6 +312,22 @@ document.head.appendChild(styleSheet);
 class ShoppingCart {
     constructor() {
         this.cart = JSON.parse(localStorage.getItem('lumiere_cart')) || [];
+        
+        // Migrate old cached images from local storage to the new paths/formats
+        this.cart.forEach(item => {
+            if (item.img) {
+                item.img = item.img.replace('images/', 'Images/');
+                item.img = item.img.replace('.jpg', '.png');
+                
+                // Fix specific casing if they were saved lowercase
+                if (item.img.includes('strawberry_flavour')) item.img = 'Images/Strawberry_Flavour.png';
+                if (item.img.includes('chocolate_flavour')) item.img = 'Images/Chocolate_Flavour.png';
+                if (item.img.includes('vanilla_flavour')) item.img = 'Images/Vanilla_Flavour.png';
+                if (item.img.includes('mango_flavour')) item.img = 'Images/Mango_Flavour.png';
+                if (item.img.includes('pista_flavour')) item.img = 'Images/Pista_Flavour.png';
+            }
+        });
+        
         this.cartToggle = document.getElementById('cartToggle');
         this.cartOverlay = document.getElementById('cartOverlay');
         this.cartSidebar = document.getElementById('cartSidebar');
