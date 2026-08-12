@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Company | LumiÃ¨re</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        .page-header {
+            padding: 150px 0 80px;
+            background: linear-gradient(rgba(45, 28, 21, 0.7), rgba(45, 28, 21, 0.7)), url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+            color: #fff;
+            text-align: center;
+        }
+        .page-header h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+        .company-section {
+            padding: 100px 0;
+            background: var(--cream);
+        }
+        .company-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .company-img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .company-text h2 {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            color: var(--dark);
+            margin-bottom: 20px;
+        }
+        .company-text p {
+            color: var(--text);
+            line-height: 1.8;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+            text-align: center;
+        }
+        .stat-item h3 {
+            font-size: 3rem;
+            color: var(--accent);
+            font-family: var(--font-heading);
+            margin-bottom: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .company-grid { grid-template-columns: 1fr; }
+            .stats-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="images/Vanilla_Flavour.jpg">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="glass-nav" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">LumiÃ¨re</a>
+            <ul class="nav-links">
+                <li><a href="index.html#hero">Home</a></li>
+                <li><a href="company.html">Company</a></li>
+                <li><a href="index.html#menu">Flavours</a></li>
+                <li><a href="index.html#gallery">Gallery</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="cartToggle" class="cart-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 8l1.5-5h15l1.5 5"></path>
+                        <path d="M3 8c1.5 0 1.5 1.5 3 1.5s1.5-1.5 3-1.5s1.5 1.5 3 1.5s1.5-1.5 3-1.5s1.5 1.5 3 1.5s1.5-1.5 3-1.5"></path>
+                        <path d="M6 15h12l-1.5 6H7.5L6 15z"></path>
+                        <path d="M4 15h16"></path>
+                        <path d="M10 15v-3c0-1.1.9-2 2-2s2 .9 2 2v3"></path>
+                    </svg>
+                    <span id="cartCount">0</span>
+                </button>
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="page-header">
+        <div class="container reveal-fade-up">
+            <h1>Our Story</h1>
+            <p>Crafting moments of joy since 2010.</p>
+        </div>
+    </header>
+
+    <!-- Company Content -->
+    <section class="company-section">
+        <div class="container">
+            <div class="company-grid">
+                <div class="company-text reveal-slide-right">
+                    <h2>The pursuit of absolute perfection</h2>
+                    <p>It started with a simple idea: ice cream shouldn't just be a dessert, it should be an experience. Our founders traveled the globe to source the finest ingredientsâ€”from Madagascar vanilla beans to pure Alphonso mangoesâ€”to create a texture and flavor profile unlike anything else on the market.</p>
+                    <p>Today, LumiÃ¨re stands as a beacon of artisanal luxury. Every pint is hand-packed, every flavor is meticulously balanced, and every bite is designed to transport you.</p>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <h3>14</h3>
+                            <p>Years of Excellence</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>50+</h3>
+                            <p>Unique Flavours</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>100%</h3>
+                            <p>Organic Ingredients</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="reveal-slide-left">
+                    <img src="https://images.unsplash.com/photo-1559703248-dcaaec9fab78?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Ice Cream Making" class="company-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark new-footer">
+        <svg class="footer-wave" viewBox="0 0 1440 120" preserveAspectRatio="none">
+            <path d="M0,60 C320,120 420,0 740,40 C1060,80 1280,20 1440,60 L1440,120 L0,120 Z" fill="#2d1c15"></path>
+        </svg>
+        <div class="container footer-grid-new">
+            <div class="footer-left">
+                <h2>Sign up to get 15% off<br>your first order</h2>
+                <form class="footer-newsletter-new">
+                    <input type="email" placeholder="Your Email Address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <div class="social-icons">
+                    <a href="#" class="social-icon">F</a>
+                    <a href="#" class="social-icon">T</a>
+                    <a href="#" class="social-icon">I</a>
+                </div>
+                <div class="brand-logo-footer">LumiÃ¨re</div>
+            </div>
+            
+            <div class="footer-right">
+                <div class="footer-links-col">
+                    <h3>Help</h3>
+                    <ul>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="index.html#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-col">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="sustainability.html">Sustainability</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 LumiÃ¨re Ice Cream Parlour. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <!-- Slide-Out Cart -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button class="close-cart" id="closeCart">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-footer">
+            <div class="cart-total">Total: $<span id="cartTotal">0.00</span></div>
+            <a href="#" class="btn-checkout-full">Proceed to Checkout</a>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

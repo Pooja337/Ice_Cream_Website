@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LumiÃ¨re | Premium Ice Cream Parlour</title>
+    <meta name="description" content="Experience the luxury of handcrafted artisanal ice cream at LumiÃ¨re.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="images/Vanilla_Flavour.jpg">
+</head>
+<body>
+    <!-- Custom Cursor (Optional) -->
+    <div id="cursor"></div>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader-content">
+            <div class="scoop"></div>
+            <div class="cone"></div>
+            <h2 class="loader-text">LumiÃ¨re</h2>
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="scroll-btn" aria-label="Scroll to top">â†‘</button>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="glass-nav">
+        <div class="nav-container">
+            <a href="#" class="logo">LumiÃ¨re</a>
+            <ul class="nav-links">
+                <li><a href="index.html#hero">Home</a></li>
+                <li><a href="index.html#about">Story</a></li>
+                <li><a href="index.html#menu">Flavours</a></li>
+                <li><a href="index.html#gallery">Gallery</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="cartToggle" class="cart-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 8l1.5-5h15l1.5 5"></path>
+                        <path d="M3 8c1.5 0 1.5 1.5 3 1.5s1.5-1.5 3-1.5s1.5 1.5 3 1.5s1.5-1.5 3-1.5s1.5 1.5 3 1.5s1.5-1.5 3-1.5"></path>
+                        <path d="M6 15h12l-1.5 6H7.5L6 15z"></path>
+                        <path d="M4 15h16"></path>
+                        <path d="M10 15v-3c0-1.1.9-2 2-2s2 .9 2 2v3"></path>
+                    </svg>
+                    <span id="cartCount">0</span>
+                </button>
+            </div>
+            
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-split">
+        <div class="hero-glow"></div>
+        <div class="particles" id="particles"></div>
+        <div class="container hero-container">
+            <!-- Left Side: Visuals -->
+            <div class="hero-visuals">
+                <img src="images/bg1 (1).png" alt="Ice Cream Base" class="hero-img-1">
+                <img src="images/bg6.png" alt="Ice Cream Accents" class="hero-img-2">
+                <img src="images/bg5 (1).png" alt="Ice Cream Top" class="hero-img-3">
+
+            </div>
+            <!-- Right Side: Content -->
+            <div class="hero-content-split">
+                <h1 class="animate-text">Handcrafted<br>Perfection</h1>
+                <p class="fade-up delay-1">Experience the pinnacle of artisanal ice cream. Every scoop is a carefully balanced masterpiece of rich flavor, fresh ingredients, and uncompromising elegance.</p>
+                <a href="#menu" class="btn-primary ripple fade-up delay-2">Explore Flavours</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container about-grid">
+            <div class="about-text reveal-fade-up">
+                <h2>Our Story</h2>
+                <p>Founded in 1985, LumiÃ¨re has been crafting the finest artisanal ice cream. We source only the best ingredients globally to ensure each scoop is a masterpiece of flavor and texture.</p>
+                <p>Every batch is made fresh daily, combining traditional techniques with innovative flavor profiles that tantalize your taste buds and leave you craving more.</p>
+            </div>
+            <div class="about-image-wrapper reveal-slide-right">
+                <!-- Using Unsplash for placeholder -->
+                <img src="https://images.unsplash.com/photo-1557142046-c704a3adf364?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Ice cream making process" class="parallax-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- Flavours/Menu Section -->
+    <section id="menu" class="section bg-cream">
+        <div class="container">
+            <div class="section-header reveal-fade-up">
+                <h2>Signature Flavours</h2>
+                <p>Hover to reveal the magic within</p>
+            </div>
+            
+            <div class="flavour-grid">
+                <!-- Card 1 -->
+                <div class="flavour-card reveal-fade-up" id="card1">
+                    <div class="card-images">
+                        <img src="images/strawberry_flavour.jpg" alt="Strawberry Base" class="img-base">
+                        <div class="wave-layer">
+                            <svg viewBox="0 0 314 314" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <clipPath id="waveClip1" clipPathUnits="userSpaceOnUse">
+                                        <path class="wave-path"></path>
+                                    </clipPath>
+                                </defs>
+                                <image href="images/strawberry_flavour_1.jpg" x="0" y="0" width="314" height="314" preserveAspectRatio="xMidYMid meet" clip-path="url(#waveClip1)" class="wave-image" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3>Strawberry Dream</h3>
+                        <span class="price">$5.50</span>
+                        <button class="btn-cart add-to-cart-btn" data-name="Strawberry Dream" data-price="5.50" data-img="images/strawberry_flavour.jpg">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="flavour-card reveal-fade-up delay-1" id="card2">
+                    <div class="card-images">
+                        <img src="images/chocolate_flavour.jpg" alt="Chocolate Base" class="img-base">
+                        <div class="wave-layer">
+                            <svg viewBox="0 0 314 314" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <clipPath id="waveClip2" clipPathUnits="userSpaceOnUse">
+                                        <path class="wave-path"></path>
+                                    </clipPath>
+                                </defs>
+                                <image href="images/chocolate_flavour_1.jpg" x="0" y="0" width="314" height="314" preserveAspectRatio="xMidYMid meet" clip-path="url(#waveClip2)" class="wave-image" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3>Belgian Chocolate</h3>
+                        <span class="price">$6.00</span>
+                        <button class="btn-cart add-to-cart-btn" data-name="Belgian Chocolate" data-price="6.00" data-img="images/chocolate_flavour.jpg">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="flavour-card reveal-fade-up delay-2" id="card3">
+                    <div class="card-images">
+                        <img src="images/vanilla_flavour.jpg" alt="Vanilla Base" class="img-base">
+                        <div class="wave-layer">
+                            <svg viewBox="0 0 314 314" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <clipPath id="waveClip3" clipPathUnits="userSpaceOnUse">
+                                        <path class="wave-path"></path>
+                                    </clipPath>
+                                </defs>
+                                <image href="images/vanilla_flavour_1.jpg" x="0" y="0" width="314" height="314" preserveAspectRatio="xMidYMid meet" clip-path="url(#waveClip3)" class="wave-image" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3>Classic Vanilla</h3>
+                        <span class="price">$5.00</span>
+                        <button class="btn-cart add-to-cart-btn" data-name="Classic Vanilla" data-price="5.00" data-img="images/vanilla_flavour.jpg">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="flavour-card reveal-fade-up" id="card4">
+                    <div class="card-images">
+                        <img src="images/mango_flavour.jpg" alt="Mango Base" class="img-base">
+                        <div class="wave-layer">
+                            <svg viewBox="0 0 314 314" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <clipPath id="waveClip4" clipPathUnits="userSpaceOnUse">
+                                        <path class="wave-path"></path>
+                                    </clipPath>
+                                </defs>
+                                <image href="images/Mango Flavour_1.jpg" x="0" y="0" width="314" height="314" preserveAspectRatio="xMidYMid meet" clip-path="url(#waveClip4)" class="wave-image" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3>Alphonso Mango</h3>
+                        <span class="price">$5.50</span>
+                        <button class="btn-cart add-to-cart-btn" data-name="Alphonso Mango" data-price="5.50" data-img="images/mango_flavour.jpg">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="flavour-card reveal-fade-up delay-1" id="card5">
+                    <div class="card-images">
+                        <img src="images/pista_flavour.jpg" alt="Pistachio Base" class="img-base">
+                        <div class="wave-layer">
+                            <svg viewBox="0 0 314 314" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <clipPath id="waveClip5" clipPathUnits="userSpaceOnUse">
+                                        <path class="wave-path"></path>
+                                    </clipPath>
+                                </defs>
+                                <image href="images/Pista_Flovour_2.jpg" x="0" y="0" width="314" height="314" preserveAspectRatio="xMidYMid meet" clip-path="url(#waveClip5)" class="wave-image" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3>Persian Pistachio</h3>
+                        <span class="price">$6.50</span>
+                        <button class="btn-cart add-to-cart-btn" data-name="Persian Pistachio" data-price="6.50" data-img="Images/Pista_Flavour.jpg">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="flavour-card reveal-fade-up delay-2" id="card6">
+                    <div class="card-images">
+                        <img src="images/Blackberry_Flavour.jpg" alt="Blackberry Base" class="img-base">
+                        <div class="wave-layer">
+                            <svg viewBox="0 0 314 314" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <clipPath id="waveClip6" clipPathUnits="userSpaceOnUse">
+                                        <path class="wave-path"></path>
+                                    </clipPath>
+                                </defs>
+                                <image href="images/Blackberry_Flavour_1.jpg" x="0" y="0" width="314" height="314" preserveAspectRatio="xMidYMid meet" clip-path="url(#waveClip6)" class="wave-image" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3>Wild Blackberry</h3>
+                        <span class="price">$5.50</span>
+                        <button class="btn-cart add-to-cart-btn" data-name="Wild Blackberry" data-price="5.50" data-img="Images/Blackberry_Flavour.jpg">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section">
+        <div class="container">
+            <div class="section-header reveal-fade-up">
+                <h2>Our Masterpieces</h2>
+                <p>Art in every scoop</p>
+            </div>
+            <div class="gallery-masonry">
+                <div class="gallery-item reveal-scale">
+                    <img src="images/blueberry_shake.jpg" alt="Blueberry Shake">
+                    <div class="overlay"><span>Blueberry Shake</span></div>
+                </div>
+                <div class="gallery-item reveal-scale delay-1">
+                    <img src="images/mamngo_shake.jpg" alt="Mango Shake">
+                    <div class="overlay"><span>Mango Shake</span></div>
+                </div>
+                <div class="gallery-item reveal-scale delay-2">
+                    <img src="images/pista_shake.jpg" alt="Pistachio Shake">
+                    <div class="overlay"><span>Pistachio Shake</span></div>
+                </div>
+                <div class="gallery-item reveal-scale">
+                    <img src="images/vanilla_shake.jpg" alt="Vanilla Shake">
+                    <div class="overlay"><span>Vanilla Shake</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section bg-pink">
+        <div class="container">
+            <div class="section-header reveal-fade-up">
+                <h2>Sweet Words</h2>
+                <p>What our lovers say</p>
+            </div>
+            <div class="carousel-container reveal-fade-up">
+                <div class="carousel-slide active">
+                    <p class="quote">"Absolutely the best ice cream I've ever had. The texture is unbelievably smooth!"</p>
+                    <span class="author">- Sophia M.</span>
+                </div>
+                <div class="carousel-slide">
+                    <p class="quote">"The liquid wave effect on their flavors is just a hint of the magic in their taste."</p>
+                    <span class="author">- James D.</span>
+                </div>
+                <div class="carousel-slide">
+                    <p class="quote">"A luxurious experience from start to finish. Highly recommend the Belgian Chocolate."</p>
+                    <span class="author">- Emily R.</span>
+                </div>
+                <!-- Carousel dots -->
+                <div class="carousel-dots">
+                    <span class="dot active" data-index="0"></span>
+                    <span class="dot" data-index="1"></span>
+                    <span class="dot" data-index="2"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Offers Section -->
+    <section id="offers" class="section">
+        <div class="container">
+            <div class="offer-box reveal-scale">
+                <div class="offer-content">
+                    <h2>Weekend Special</h2>
+                    <p>Buy 2 Signature Scoops, Get 1 Free!</p>
+                    <div class="countdown" id="countdown">
+                        <div class="time-box">
+                            <span id="days">00</span>
+                            <small>Days</small>
+                        </div>
+                        <div class="time-box">
+                            <span id="hours">00</span>
+                            <small>Hours</small>
+                        </div>
+                        <div class="time-box">
+                            <span id="mins">00</span>
+                            <small>Mins</small>
+                        </div>
+                        <div class="time-box">
+                            <span id="secs">00</span>
+                            <small>Secs</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="offer-badge">
+                    <span>30% OFF</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location / Contact Section -->
+    <section id="contact" class="section bg-cream">
+        <div class="container contact-grid">
+            <div class="contact-form-wrapper reveal-slide-right">
+                <h2>Get in Touch</h2>
+                <form id="contactForm">
+                    <div class="input-group">
+                        <input type="text" id="name" required>
+                        <label for="name">Your Name</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" id="email" required>
+                        <label for="email">Your Email</label>
+                    </div>
+                    <div class="input-group">
+                        <textarea id="message" required></textarea>
+                        <label for="message">Message</label>
+                    </div>
+                    <button type="submit" class="btn-primary ripple">Send Message</button>
+                    <p id="formMessage" class="form-msg"></p>
+                </form>
+            </div>
+            <div class="map-wrapper reveal-slide-left">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.15830869428!2d-74.119763973046!3d40.69766374874431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1680000000000!5m2!1sen!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark new-footer">
+        <!-- SVG Wave -->
+        <svg class="footer-wave" viewBox="0 0 1440 120" preserveAspectRatio="none">
+            <path d="M0,60 C320,120 420,0 740,40 C1060,80 1280,20 1440,60 L1440,120 L0,120 Z" fill="#2d1c15"></path>
+        </svg>
+        <div class="container footer-grid-new">
+            <div class="footer-left">
+                <h2>Sign up to get 15% off<br>your first order</h2>
+                <form class="footer-newsletter-new">
+                    <input type="email" placeholder="Your Email Address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <div class="social-icons">
+                    <a href="#" class="social-icon">F</a>
+                    <a href="#" class="social-icon">T</a>
+                    <a href="#" class="social-icon">I</a>
+                </div>
+                <div class="brand-logo-footer">LumiÃ¨re</div>
+            </div>
+            
+            <div class="footer-right">
+                <div class="footer-links-col">
+                    <h3>Help</h3>
+                    <ul>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="index.html#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-col">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="sustainability.html">Sustainability</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 LumiÃ¨re Ice Cream Parlour. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Slide-Out Cart -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button class="close-cart" id="closeCart">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Items injected by JS -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">Total: $<span id="cartTotal">0.00</span></div>
+            <a href="#" class="btn-checkout-full">Proceed to Checkout</a>
+        </div>
+    </div>
+
+    <!-- Main Script -->
+    <script src="script.js"></script>
+</body>
+</html>

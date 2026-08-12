@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ & Help | LumiÃ¨re</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body { background: #faf9f6 !important; }
+        .faq-hero {
+            background: #ffe6e9;
+            padding: 150px 5% 80px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 50px;
+            min-height: 80vh;
+            position: relative;
+            overflow: hidden;
+        }
+        .faq-hero-text h1 {
+            font-size: 5rem;
+            font-family: var(--font-heading);
+            color: #000;
+            margin-bottom: 20px;
+        }
+        .faq-hero-text h2 {
+            font-size: 1.5rem;
+            color: #4a3026;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+        .faq-hero-text p {
+            color: #4a3026;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            max-width: 400px;
+            line-height: 1.6;
+        }
+        .faq-hero-text a { color: #4a3026; font-weight: bold; }
+        .btn-white {
+            background: #fff;
+            color: #4a3026;
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            transition: 0.3s;
+        }
+        .btn-white:hover { transform: scale(1.05); }
+        .faq-hero-images { position: relative; height: 100%; min-height: 400px; }
+        .hero-img {
+            position: absolute; width: 200px; border-radius: 15px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15); border: 8px solid #fff;
+        }
+        .img-1 { top: 5%; left: 0; transform: rotate(-10deg); }
+        .img-2 { top: 25%; right: 5%; width: 250px; transform: rotate(5deg); z-index: 2; }
+        .img-3 { bottom: 0; left: 20%; transform: rotate(-5deg); z-index: 3; }
+        
+        .faq-body {
+            max-width: 100%; margin: 0; padding: 120px 5% 80px 20px;
+            display: grid; grid-template-columns: 300px minmax(0, 1200px); gap: 60px; align-items: start;
+        }
+        .faq-sidebar { position: sticky; top: 120px; }
+        .faq-sidebar ul { list-style: none; padding: 0; }
+        .faq-sidebar li { margin-bottom: 5px; }
+        .faq-sidebar a {
+            display: block; padding: 15px 20px; text-decoration: none;
+            color: #555; font-weight: 500; transition: 0.3s; border-radius: 8px;
+        }
+        .faq-sidebar a.active, .faq-sidebar a:hover {
+            background: #ffe6e9; color: #4a3026;
+        }
+        .faq-category { margin-bottom: 60px; scroll-margin-top: 100px; }
+        .faq-category h3 { font-size: 2rem; color: #4a3026; margin-bottom: 20px; font-family: var(--font-heading); }
+        .faq-item {
+            background: #ffe6e9; margin-bottom: 5px; overflow: hidden;
+        }
+        .faq-question {
+            padding: 20px 25px; cursor: pointer; display: flex;
+            justify-content: space-between; align-items: center; transition: 0.3s;
+        }
+        .faq-question h4 { color: #4a3026; margin: 0; font-size: 1.1rem; font-weight: 500; }
+        .faq-icon { font-size: 1.2rem; color: #4a3026; transition: transform 0.3s; font-weight: bold; }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+        .faq-answer-content { padding: 0 25px 25px; color: #4a3026; line-height: 1.6; opacity: 0.8; }
+        .faq-item.active .faq-answer { max-height: 800px; }
+        .faq-item.active .faq-icon { transform: rotate(180deg); }
+        
+        @media (max-width: 992px) {
+            .faq-hero, .faq-body { grid-template-columns: 1fr; }
+            .faq-hero-images { height: 400px; }
+            .faq-sidebar { position: static; margin-bottom: 40px; display: flex; flex-wrap: wrap; gap: 5px; }
+        }
+    </style>
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="images/Vanilla_Flavour.jpg">
+</head>
+<body>
+    <nav class="glass-nav" id="navbar">
+        <div class="nav-container">
+            <div class="logo">LumiÃ¨re</div>
+            <ul class="nav-links">
+                <li><a href="index.html#hero">Home</a></li>
+                <li><a href="index.html#about">Story</a></li>
+                <li><a href="index.html#menu">Flavours</a></li>
+                <li><a href="index.html#gallery">Gallery</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="cartToggle" class="cart-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 8l1.5-5h15l1.5 5"></path>
+                        <path d="M3 8c1.5 0 1.5 1.5 3 1.5s1.5-1.5 3-1.5s1.5 1.5 3 1.5s1.5-1.5 3-1.5s1.5 1.5 3 1.5s1.5-1.5 3-1.5"></path>
+                        <path d="M6 15h12l-1.5 6H7.5L6 15z"></path>
+                        <path d="M4 15h16"></path>
+                        <path d="M10 15v-3c0-1.1.9-2 2-2s2 .9 2 2v3"></path>
+                    </svg>
+                    <span id="cartCount">0</span>
+                </button>
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="faq-hero">
+        <div class="faq-hero-text">
+            <h1>FAQ</h1>
+            <h2>Still Have Questions?</h2>
+            <p>Below are some of the most common questions our customers have asked us! If you don't find what you're looking for, get in touch with our team. Weâ€™d be happy to help!</p>
+            <a href="index.html#contact" class="btn-white">Get In Touch</a>
+        </div>
+        <div class="faq-hero-images" style="display: flex; justify-content: center; align-items: center;">
+            <img src="Images/bg4.png" alt="FAQ Image" style="width: 100%; max-width: 450px; border-radius: 20px; box-shadow: 0 15px 30px rgba(0,0,0,0.15); object-fit: cover;">
+        </div>
+    </header>
+
+    <!-- FAQ Body -->
+    <section class="faq-body">
+        <aside class="faq-sidebar">
+            <ul>
+                <li><a href="#general" class="active">General Questions</a></li>
+                <li><a href="#storage">Storage Questions</a></li>
+                <li><a href="#ingredients">Ingredients</a></li>
+                <li><a href="#shipping">Shipping + Delivery</a></li>
+            </ul>
+        </aside>
+        
+        <div class="faq-content">
+            <!-- Category 1 -->
+            <div id="general" class="faq-category">
+                <h3>General Questions</h3>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>What exactly is LumiÃ¨re?</h4>
+                        <span class="faq-icon">v</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>LumiÃ¨re is an ultra-premium artisanal ice cream brand dedicated to crafting the finest frozen experiences using globally sourced, organic ingredients.</p>
+                            <img src="Images/Vanilla_Flavour.jpg" alt="LumiÃ¨re Ice Cream" style="width: 100%; border-radius: 10px; margin-top: 15px; max-height: 300px; object-fit: cover;">
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Why should I eat LumiÃ¨re?</h4>
+                        <span class="faq-icon">v</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">Because you deserve the best! We use zero artificial flavors, 100% pasture-raised dairy, and perfectly balanced recipes that elevate dessert to a luxury experience.</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>How can I stock LumiÃ¨re in my store?</h4>
+                        <span class="faq-icon">v</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">We'd love to partner with you. Please reach out to our wholesale team via the Contact Us page for pricing and distribution inquiries.</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Are you hiring?</h4>
+                        <span class="faq-icon">v</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">Yes! We are always looking for passionate people to join our parlour team and headquarters.</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>How can I contact LumiÃ¨re for support?</h4>
+                        <span class="faq-icon">v</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">You can reach our support team through the "Get In Touch" section on our homepage or by emailing support@lumiereicecream.com.</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>What happens if I don't like LumiÃ¨re?</h4>
+                        <span class="faq-icon">v</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">We stand by our Satisfaction Guarantee. If you aren't completely in love with your pint, we'll refund your order. No questions asked.</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Category 2 -->
+            <div id="storage" class="faq-category">
+                <h3>Storage</h3>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>How do I store my LumiÃ¨re?</h4>
+                        <span class="faq-icon">v</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">Store your pints in the coldest part of your freezer (usually the back). For the best tasting experience, allow the pint to sit at room temperature for 5-10 minutes before scooping.</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Category 3 -->
+            <div id="ingredients" class="faq-category">
+                <h3>Ingredients</h3>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Do you offer vegan or dairy-free options?</h4>
+                        <span class="faq-icon">v</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">Yes! We have a dedicated line of plant-based ice creams made from a luxurious blend of coconut and oat milk. They are crafted with the same attention to detail and are just as creamy as our traditional dairy options.</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Where do you source your ingredients?</h4>
+                        <span class="faq-icon">v</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">Our dairy is sourced exclusively from local, pasture-raised farms. For our exotic flavors, we partner directly with certified organic growers around the worldâ€”like our Alphonso Mangoes imported directly from Ratnagiri, India.</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Category 4 -->
+            <div id="shipping" class="faq-category">
+                <h3>Shipping + Delivery</h3>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>How does the pint subscription work?</h4>
+                        <span class="faq-icon">v</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">When you subscribe to the Pint Subscription, you'll receive a curated box of 3 hand-packed pints delivered to your door on the first Tuesday of every month. We ship using dry ice and thermal luxury packaging to ensure your order arrives perfectly frozen, even in the summer heat.</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>How do I track my order?</h4>
+                        <span class="faq-icon">v</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">Once your order is carefully packed and shipped, you will receive an email with a tracking link. You can also log into your account and view live updates on your order's journey from our parlour to your freezer.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark new-footer">
+        <!-- SVG Wave -->
+        <svg class="footer-wave" viewBox="0 0 1440 120" preserveAspectRatio="none">
+            <path d="M0,60 C320,120 420,0 740,40 C1060,80 1280,20 1440,60 L1440,120 L0,120 Z" fill="#2d1c15"></path>
+        </svg>
+        <div class="container footer-grid-new">
+            <div class="footer-left">
+                <h2>Sign up to get 15% off<br>your first order</h2>
+                <form class="footer-newsletter-new">
+                    <input type="email" placeholder="Your Email Address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <div class="social-icons">
+                    <a href="#" class="social-icon">F</a>
+                    <a href="#" class="social-icon">T</a>
+                    <a href="#" class="social-icon">I</a>
+                </div>
+                <div class="brand-logo-footer">LumiÃ¨re</div>
+            </div>
+            
+            <div class="footer-right">
+                <div class="footer-links-col">
+                    <h3>Help</h3>
+                    <ul>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="index.html#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-col">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="sustainability.html">Sustainability</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 LumiÃ¨re Ice Cream Parlour. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <!-- Slide-Out Cart -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button class="close-cart" id="closeCart">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Items injected by JS -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">Total: $<span id="cartTotal">0.00</span></div>
+            <a href="#" class="btn-checkout-full">Proceed to Checkout</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // FAQ Accordion Logic
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                const isActive = item.classList.contains('active');
+                
+                // Toggle clicked
+                if (isActive) {
+                    item.classList.remove('active');
+                } else {
+                    item.classList.add('active');
+                }
+            });
+        });
+        
+        // Sidebar active state logic
+        const sidebarLinks = document.querySelectorAll('.faq-sidebar a');
+        sidebarLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                sidebarLinks.forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
